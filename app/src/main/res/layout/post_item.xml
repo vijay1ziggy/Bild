@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="600sp"
+    android:orientation="vertical"
+    android:layout_centerVertical="true"
+    android:background="@drawable/post_background"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="410sp"
+        android:layout_height="450sp"
+        android:layout_marginStart="-10sp"
+        android:id="@+id/card_post"/>
+
+    <TextView
+        android:layout_width="350sp"
+        android:layout_height="100sp"
+        android:layout_marginStart="20sp"
+        android:id="@+id/card_description"/>
+
+</LinearLayout>

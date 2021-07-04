@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.Search.SearchFragment">
+
+        <RelativeLayout
+            android:layout_width="350sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:layout_marginLeft="30sp"
+            android:id="@+id/bar"
+            android:background="@drawable/search">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:id="@+id/toolbar">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50sp"
+                    android:layout_marginStart="10sp"
+                    android:src="@drawable/ic_search_"/>
+
+                <com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView
+                    android:id="@+id/search_bar"
+                    android:layout_width="300sp"
+                    android:layout_height="match_parent"
+                    android:maxLines="1"
+                    android:layout_marginStart="30dp"
+                    android:textColor="@color/black"
+                    android:background="@android:color/transparent" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="694dp"
+        android:layout_below="@+id/bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_view_users"
+                android:layout_width="match_parent"
+                android:layout_height="397dp"
+                android:layout_below="@id/bar" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_view_tags"
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:layout_below="@id/recycle_view_users"
+                android:layout_marginTop="5dp" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+

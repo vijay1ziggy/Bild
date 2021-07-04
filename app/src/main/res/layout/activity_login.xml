@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEDBD0"
+    tools:context=".LoginActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15.7sp"
+    android:layout_marginTop="25sp"
+    android:layout_marginRight="15.7sp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="580sp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="544sp"
+            android:background="@drawable/white_cueve_bg"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear"
+            android:orientation="vertical"
+            android:paddingLeft="20.7sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="LOGIN"
+                android:textColor="@color/black"
+                android:textSize="31.3sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35sp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Email"
+                android:textColor="#c2c2c2"
+                android:textSize="13.3sp"/>
+
+            <EditText
+                android:id="@+id/emaillog"
+                android:layout_width="310sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_semibold"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"
+                android:textColor="#000000"
+                android:textCursorDrawable="@drawable/grey_cursor_color"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1sp"
+                android:layout_marginTop="6.3sp"
+                android:layout_marginRight="44.3sp"
+                android:background="#d5d5d5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30.3sp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Password"
+                android:textColor="#c2c2c2"
+                android:textSize="13.3sp"/>
+
+            <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+                android:id="@+id/passwordlog"
+                android:layout_width="340sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11.7sp"
+                android:background="@android:color/transparent"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:maxLength="15"
+                android:paddingRight="44.3sp"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textCursorDrawable="@drawable/grey_cursor_color"
+                android:textSize="18sp"
+                app:drawable_hide="@drawable/hide1"
+                app:drawable_show="@drawable/show"
+                app:tint_color="#d5d5d5"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1sp"
+                android:layout_marginTop="6.3sp"
+                android:layout_marginRight="44.3sp"
+                android:background="#d5d5d5"/>
+
+            <TextView
+                android:id="@+id/forgotp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="17.3sp"
+                android:layout_marginRight="44.3sp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Forgot Password?"
+                android:textColor="#d5d5d5"
+                android:textSize="12.3sp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="310sp"
+            android:layout_marginTop="380sp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/loginbtn"
+                android:layout_width="45.7sp"
+                android:layout_height="29.3sp"
+                android:src="@drawable/black_arrow"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="750sp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New User? Signin For Free"
+            android:fontFamily="@font/poppins_regular"
+            android:id="@+id/registerpage"
+            android:layout_marginLeft="89sp"
+            android:textColor="#000000"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <ProgressBar
+            android:id="@+id/progrss"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

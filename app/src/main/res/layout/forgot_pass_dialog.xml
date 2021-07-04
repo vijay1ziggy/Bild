@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="35sp"
+        android:textColor="#c2c2c2"
+        android:layout_gravity="center"/>
+
+    <View
+        android:layout_width="464dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="6.3sp"
+        android:layout_marginRight="44.3sp"
+        android:background="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35sp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Enter Email to send Reset Password Link"
+        android:textColor="#c2c2c2"
+        android:layout_marginStart="25sp"
+        android:textSize="13.3sp"/>
+
+    <EditText
+        android:id="@+id/eamilid"
+        android:layout_width="310sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:layout_marginStart="20sp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/poppins_semibold"
+        android:maxLines="1"
+        android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        android:textCursorDrawable="@drawable/grey_cursor_color"
+        android:textSize="18sp"/>
+
+    <View
+        android:layout_width="360sp"
+        android:layout_height="1sp"
+        android:layout_marginTop="5.3sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginRight="44.3sp"
+        android:background="#000000"/>
+
+
+
+
+</LinearLayout>

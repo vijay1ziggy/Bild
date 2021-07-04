@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Post.PostActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        android:background="?android:attr/windowBackground">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:backgroundTint="@color/grey"
+            android:background="?android:attr/windowBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/close"
+                    android:layout_width="34dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/ic_baseline_close_24"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="post"
+                    android:id="@+id/post"
+                    android:textSize="23sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="739dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/image_added"
+            android:layout_width="match_parent"
+            android:layout_height="327dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8sp"
+            android:layout_marginTop="30sp"
+            android:text="category"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+        <Spinner
+            android:id="@+id/category"
+            android:layout_width="219dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="150sp"
+            android:layout_marginTop="-35sp"
+            android:entries="@array/category" />
+
+        <com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="138dp"
+            android:layout_marginTop="15dp"
+            android:hint="Description"
+            android:maxLines="5"
+            app:hashtagColor="@color/teal_700"
+            app:socialFlags="hashtag|mention">
+
+        </com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

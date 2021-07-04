@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "449243080475",
+    "project_id": "bild-project",
+    "storage_bucket": "bild-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449243080475:android:bdf528a0bcbe970667d5be",
+        "android_client_info": {
+          "package_name": "vijay.bild"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449243080475-ocor16rvfmkp2mes9156vkcbkbsd38cg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAf_AYv7GXSJqsCh6CMVBnOw1DKgb8MS4M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449243080475-ocor16rvfmkp2mes9156vkcbkbsd38cg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

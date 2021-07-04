@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Home.HomeFragment"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/chat"
+                    android:layout_width="40sp"
+                    android:layout_height="35sp"
+                    android:layout_marginLeft="330sp"
+                    android:layout_marginTop="0sp"
+                    android:src="@drawable/icons8_topic" />
+            <androidx.core.widget.NestedScrollView
+        android:layout_width="370sp"
+        android:layout_marginLeft="0sp"
+        android:layout_marginTop="60sp"
+        android:layout_height="700sp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="700sp"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/post2"
+                android:layout_width="5dp"
+                android:layout_height="700sp"
+                android:layout_below="@id/bar" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/post1"
+                android:layout_width="356dp"
+                android:layout_height="700sp"
+                android:layout_marginLeft="10sp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>
