@@ -5,12 +5,10 @@
 
     <uses-feature
         android:glEsVersion="0x00020000"
-        android:required="true"/>
-
+        android:required="true" />
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -26,7 +24,8 @@
         android:theme="@style/Theme.Design.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:replace="android:label">
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".AllCategoryActivity"></activity>
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".ChatMapActivity" />
         <activity android:name=".OptionsActivity" />
         <activity android:name=".FollowersActivity" />
@@ -45,8 +44,9 @@
         </activity>
         <activity android:name=".gallery.SelectActivity" />
         <activity android:name=".filter.FilterActivity" />
-        <activity android:name=".ChatroomActivity"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+        <activity
+            android:name=".ChatroomActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity android:name=".gallery.MultiSelectActivity" />
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
@@ -63,15 +63,15 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_api_key"/>
+            android:value="@string/google_api_key" />
 
         <uses-library
             android:name="org.apache.http.legacy"
-            android:required="false"/>
+            android:required="false" />
 
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version"/>
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

@@ -121,7 +121,7 @@ public class ChatMapActivity extends AppCompatActivity implements
     private boolean isLocationServiceRunning() {
         ActivityManager manager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
         for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)){
-            if("com.codingwithmitch.googledirectionstest.services.LocationService".equals(service.service.getClassName())) {
+            if("vijay.bild.services.LocationService".equals(service.service.getClassName())) {
                 Log.d(TAG, "isLocationServiceRunning: location service is already running.");
                 return true;
             }

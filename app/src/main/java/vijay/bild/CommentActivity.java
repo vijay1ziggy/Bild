@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -24,7 +25,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import vijay.bild.Adapter.CommentAdapter;
+import vijay.bild.Adapter.PostAdapter;
 import vijay.bild.model.Comment;
+import vijay.bild.model.Post;
 import vijay.bild.model.User;
 import com.squareup.picasso.Picasso;
 
@@ -49,6 +52,8 @@ public class CommentActivity extends AppCompatActivity {
 
     FirebaseUser fUser;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +73,7 @@ public class CommentActivity extends AppCompatActivity {
         Intent intent = getIntent();
         postId = intent.getStringExtra("postId");
         authorId = intent.getStringExtra("authorId");
+
 
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
@@ -136,18 +142,30 @@ public class CommentActivity extends AppCompatActivity {
         map.put("publisher", fUser.getUid());
 
         addComment.setText("");
+        addNotification(postId.toString(), fUser.getUid());
 
         ref.child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
                     Toast.makeText(CommentActivity.this, "Comment added!", Toast.LENGTH_SHORT).show();
+
                 } else {
                     Toast.makeText(CommentActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
+    }
+    private void addNotification(String postId, String publisherId) {
+        HashMap<String, Object> map = new HashMap<>();
+
+        map.put("userid", publisherId);
+        map.put("text", "commented on your post.");
+        map.put("postid", postId);
+        map.put("isPost", true);
+
+        FirebaseDatabase.getInstance().getReference().child("Notifications").child(fUser.getUid()).push().setValue(map);
     }
 
     private void getUserImage() {

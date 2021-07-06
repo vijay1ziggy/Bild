@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".AllCategoryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_left"/>
+            
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:padding="10sp"
+            android:textAllCaps="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:background="@drawable/food_back"
+            android:layout_margin="10sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:textSize="30sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="ANIMALS"
+                android:textColor="@color/white"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="5sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show"
+                android:layout_marginTop="100sp"
+                android:id="@+id/animalbtn"
+                android:layout_marginLeft="5sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150sp"
+                android:src="@drawable/animal"
+                android:layout_marginLeft="200sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:background="@drawable/round_bk5"
+            android:layout_margin="10sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:textSize="30sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Aerial"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="5sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show"
+                android:layout_marginTop="100sp"
+                android:id="@+id/aerialbtn"
+                android:layout_marginLeft="6sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200sp"
+                android:src="@drawable/aerial"
+                android:layout_marginLeft="200sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:background="@drawable/round_bk2"
+            android:layout_margin="10sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:textSize="30sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="SPORTS"
+                android:textColor="@color/white"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="5sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show"
+                android:layout_marginTop="100sp"
+                android:id="@+id/sportsbtn"
+                android:layout_marginLeft="5sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150sp"
+                android:src="@drawable/sports"
+                android:layout_marginLeft="200sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:background="@drawable/food_back"
+            android:layout_margin="10sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:textSize="30sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="FINE ART"
+                android:textColor="@color/white"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="5sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show"
+                android:layout_marginTop="100sp"
+                android:id="@+id/fineArtBtn"
+                android:layout_marginLeft="5sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150sp"
+                android:src="@drawable/fineArt"
+                android:layout_marginLeft="200sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:background="@drawable/round_bk5"
+            android:layout_margin="10sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:textSize="30sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="fashion"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="5sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show"
+                android:layout_marginTop="100sp"
+                android:id="@+id/fashionBtn"
+                android:layout_marginLeft="6sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200sp"
+                android:src="@drawable/fashion"
+                android:layout_marginLeft="200sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:background="@drawable/round_bk2"
+            android:layout_margin="10sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:textSize="30sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="wedding"
+                android:textColor="@color/white"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="5sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show"
+                android:layout_marginTop="100sp"
+                android:id="@+id/wedding"
+                android:layout_marginLeft="5sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150sp"
+                android:src="@drawable/wedding"
+                android:layout_marginLeft="200sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:background="@drawable/food_back"
+            android:layout_margin="10sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:textSize="30sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Portrait"
+                android:textColor="@color/white"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="5sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show"
+                android:layout_marginTop="100sp"
+                android:id="@+id/potratBtn"
+                android:layout_marginLeft="5sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150sp"
+                android:src="@drawable/"
+                android:layout_marginLeft="200sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:background="@drawable/round_bk5"
+            android:layout_margin="10sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:textSize="30sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="events"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="5sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show"
+                android:layout_marginTop="100sp"
+                android:id="@+id/eventsBtn"
+                android:layout_marginLeft="6sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200sp"
+                android:src="@drawable/events"
+                android:layout_marginLeft="200sp"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
