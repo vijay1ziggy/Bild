@@ -10,7 +10,7 @@
             android:layout_width="350sp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
-            android:layout_marginLeft="30sp"
+            android:layout_marginLeft="24sp"
             android:id="@+id/bar"
             android:background="@drawable/search">
 
@@ -44,15 +44,18 @@
         android:layout_below="@+id/bar">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="390sp"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginLeft="4sp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycle_view_users"
                 android:layout_width="match_parent"
                 android:layout_height="397dp"
                 android:layout_below="@id/bar" />
+
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycle_view_tags"

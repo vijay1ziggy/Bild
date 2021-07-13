@@ -92,7 +92,6 @@ public class DashboardActivity extends AppCompatActivity {
 
                     case R.id.nav_post:
                         fragment = null;
-
                         Intent intent = new Intent(DashboardActivity.this, PostActivity.class);
                         startActivity(intent);
                         break;

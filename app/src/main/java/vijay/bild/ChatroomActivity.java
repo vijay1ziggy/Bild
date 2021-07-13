@@ -337,6 +337,7 @@ public class ChatroomActivity extends AppCompatActivity implements
             }
             case R.id.action_chatroom_leave:{
                 leaveChatroom();
+                finish();
                 return true;
             }
             default:{

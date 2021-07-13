@@ -206,7 +206,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:id="@+id/my_pictures"
-                    android:src="@drawable/ic_all"
+                    android:src="@drawable/ic_galary"
                     style="?android:attr/buttonBarButtonStyle"/>
 
                 <ImageButton

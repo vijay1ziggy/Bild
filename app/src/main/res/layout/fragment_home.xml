@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/containerr"
     tools:context=".fragments.Home.HomeFragment"
     android:background="@color/white"
     android:orientation="vertical">
@@ -18,12 +19,35 @@
                     android:layout_height="35sp"
                     android:layout_marginLeft="330sp"
                     android:layout_marginTop="0sp"
-                    android:src="@drawable/icons8_topic" />
-            <androidx.core.widget.NestedScrollView
-        android:layout_width="370sp"
-        android:layout_marginLeft="0sp"
-        android:layout_marginTop="60sp"
-        android:layout_height="700sp">
+                    android:src="@drawable/ic_messages" />
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="40sp"
+            android:layout_height="35sp"
+            android:layout_marginLeft="0sp"
+            android:layout_marginTop="0sp"
+            android:src="@drawable/menu_rounded" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/categotname"
+            android:text="Bild"
+            android:layout_marginLeft="140sp"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_marginTop="-15sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:padding="10sp"
+            android:textAllCaps="true"/>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="370sp"
+            android:layout_marginLeft="0sp"
+            android:layout_marginTop="60sp"
+            android:layout_height="700sp">
 
 
         <LinearLayout

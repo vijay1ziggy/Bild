@@ -29,13 +29,13 @@
         app:itemIconTint="@drawable/item_selector"
         android:id="@+id/bottom_navigation"/>
 
-    <TextView
+   <!-- <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/remoteConfig"
         android:text="Pavana"
         android:gravity="center"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"/>-->
 
 
 </RelativeLayout>

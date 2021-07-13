@@ -27,9 +27,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vijay.bild.Adapter.PostAdapter;
+import vijay.bild.AllCategoryActivity;
 import vijay.bild.ChatMapActivity;
+import vijay.bild.DashboardActivity;
+import vijay.bild.EditProfileActivity;
 import vijay.bild.OptionsActivity;
 import vijay.bild.R;
+import vijay.bild.fragments.Post.PostActivity;
 import vijay.bild.model.Post;
 
 
@@ -40,7 +44,7 @@ public class HomeFragment extends Fragment {
     private List<Post> postList;
     private ImageView chat;
     private List<String> followingList;
-
+    private ImageView menu;
 
 
     @Override
@@ -58,6 +62,7 @@ public class HomeFragment extends Fragment {
         postAdapter = new PostAdapter(getContext(), postList);
         recyclerViewPosts.setAdapter(postAdapter);
         chat = view.findViewById(R.id.chat);
+        menu = view.findViewById(R.id.menu);
         followingList = new ArrayList<>();
         checkFollowingUsers();
 
@@ -71,7 +76,7 @@ public class HomeFragment extends Fragment {
     private void checkFollowingUsers() {
 
         FirebaseDatabase.getInstance().getReference().child("Follow").child(FirebaseAuth.getInstance()
-                .getCurrentUser().getUid()).child("following").addValueEventListener(new ValueEventListener() {
+                .getCurrentUser().getUid()).child("Following").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 followingList.clear();
@@ -118,6 +123,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), ChatMapActivity.class));
+            }
+        });
+
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), AllCategoryActivity.class));
             }
         });
 
