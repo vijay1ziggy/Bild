@@ -49,6 +49,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         remoteConfig.fetchAndActivate().addOnCompleteListener(new OnCompleteListener<Boolean>() {
             @Override
+
             public void onComplete(@NonNull @NotNull Task<Boolean> task) {
                 final String test = remoteConfig.getString("test");
                 if (blocker.getText().toString().equals("test"))

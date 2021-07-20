@@ -70,7 +70,7 @@ public class FollowersActivity extends AppCompatActivity {
                 getFollowings();
                 break;
 
-            case "likes":
+            case "Likes":
                 getLikes();
                 break;
         }
@@ -127,7 +127,6 @@ public class FollowersActivity extends AppCompatActivity {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     idList.add((snapshot.getKey()));
                 }
-
                 showUsers();
             }
 

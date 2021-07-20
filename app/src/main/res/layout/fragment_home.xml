@@ -55,17 +55,15 @@
             android:layout_height="700sp"
             android:orientation="horizontal">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/post2"
-                android:layout_width="5dp"
-                android:layout_height="700sp"
-                android:layout_below="@id/bar" />
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/post1"
-                android:layout_width="356dp"
+                android:layout_width="match_parent"
                 android:layout_height="700sp"
-                android:layout_marginLeft="10sp" />
+                android:layout_marginLeft="0sp">
+
+            </androidx.recyclerview.widget.RecyclerView>
 
         </LinearLayout>
 

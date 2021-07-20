@@ -19,7 +19,7 @@ public class Post {
             this.publisher = publisher;
         }
     public String getCategory() {
-        return category;
+            return category;
     }
 
     public void setCategory(String category) {

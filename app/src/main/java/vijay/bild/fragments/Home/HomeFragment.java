@@ -5,18 +5,13 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.ViewAnimator;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -29,11 +24,8 @@ import java.util.List;
 import vijay.bild.Adapter.PostAdapter;
 import vijay.bild.AllCategoryActivity;
 import vijay.bild.ChatMapActivity;
-import vijay.bild.DashboardActivity;
-import vijay.bild.EditProfileActivity;
-import vijay.bild.OptionsActivity;
 import vijay.bild.R;
-import vijay.bild.fragments.Post.PostActivity;
+import vijay.bild.model.Category;
 import vijay.bild.model.Post;
 
 
@@ -44,6 +36,7 @@ public class HomeFragment extends Fragment {
     private List<Post> postList;
     private ImageView chat;
     private List<String> followingList;
+    private List<Category> categoryList;
     private ImageView menu;
 
 
@@ -64,6 +57,8 @@ public class HomeFragment extends Fragment {
         chat = view.findViewById(R.id.chat);
         menu = view.findViewById(R.id.menu);
         followingList = new ArrayList<>();
+        categoryList = new ArrayList<>();
+
         checkFollowingUsers();
 
 
@@ -84,6 +79,7 @@ public class HomeFragment extends Fragment {
                     followingList.add(snapshot.getKey());
                 }
                 followingList.add(FirebaseAuth.getInstance().getCurrentUser().getUid());
+               // checkCategory();
                 readPosts();
             }
 
@@ -95,6 +91,34 @@ public class HomeFragment extends Fragment {
 
     }
 
+   /* private void checkCategory() {
+
+        FirebaseDatabase.getInstance().getReference().child("CategoryPost").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                categoryList.clear();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    Category category = snapshot.getValue(Category.class);
+
+                    for(String id : followingList){
+                        if(category.getUserid().equals(id)){
+                            categoryList.add(category);
+                        }
+                    }
+
+                }
+              readPosts();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+    }*/
+
+
     private void readPosts() {
 
         FirebaseDatabase.getInstance().getReference().child("Posts").addValueEventListener(new ValueEventListener() {
@@ -104,11 +128,12 @@ public class HomeFragment extends Fragment {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Post post = snapshot.getValue(Post.class);
 
-                    for (String id : followingList) {
+                   for (String id : followingList) {
                         if (post.getPublisher().equals(id)){
-                            postList.add(post);
+                    postList.add(post);
+
                         }
-                    }
+                  }
                 }
                 postAdapter.notifyDataSetChanged();
             }

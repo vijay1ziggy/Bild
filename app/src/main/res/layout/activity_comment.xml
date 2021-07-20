@@ -22,6 +22,7 @@
         android:layout_above="@id/bottom"
         android:background="@color/white"/>
 
+
     <RelativeLayout
         android:id="@+id/bottom"
         android:layout_width="match_parent"
@@ -29,6 +30,12 @@
         android:background="#ffffff"
         android:layout_alignParentBottom="true"
         android:padding="5dp">
+
+        <View
+            android:layout_width="480sp"
+            android:layout_height="1sp"
+            android:layout_marginTop="-5sp"
+            android:background="@color/black"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="40dp"
@@ -40,6 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/image_profile"
             android:hint="Add a comment..."
+            android:textColorHint="@color/black"
             android:id="@+id/add_comment"
             android:layout_centerVertical="true"
             android:layout_marginStart="10dp"

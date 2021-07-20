@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/settings"
-        android:text="@string/settings"
+        android:text="Report"
         android:textColor="@color/colorPrimaryDark"
         android:layout_margin="10dp"
         android:textSize="18sp"/>

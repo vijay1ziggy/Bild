@@ -26,6 +26,7 @@ import java.util.List;
 
 import vijay.bild.CommentActivity;
 import vijay.bild.FollowersActivity;
+import vijay.bild.OptionsActivity;
 import vijay.bild.R;
 import vijay.bild.fragments.Post.PostDetailFragment;
 import vijay.bild.fragments.Profile.ProfileFragment;
@@ -118,6 +119,16 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.Viewholder> {
             }
         });
 
+        holder.noOfLikes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, FollowersActivity.class);
+                intent.putExtra("id", post.getPublisher());
+                intent.putExtra("title", "Likes");
+                mContext.startActivity(intent);
+            }
+        });
+
         holder.save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,6 +150,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.Viewholder> {
 
                 ((FragmentActivity) mContext).getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragment_container, new ProfileFragment()).commit();
+
             }
         });
 
@@ -161,16 +173,17 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.Viewholder> {
 
                 ((FragmentActivity) mContext).getSupportFragmentManager().beginTransaction()
                         .replace(R.id.fragment_container, new ProfileFragment()).commit();
+
+
             }
         });
 
         holder.postImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mContext.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit().putString("postid", post.getPostid()).apply();
+                mContext.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit().putString("postId", post.getPostid()).apply();
 
-                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container, new PostDetailFragment()).commit();
+                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PostDetailFragment()).commit();
             }
         });
 
@@ -179,7 +192,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.Viewholder> {
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, FollowersActivity.class);
                 intent.putExtra("id", post.getPublisher());
-                intent.putExtra("title", "likes");
+                intent.putExtra("title", "Likes");
                 mContext.startActivity(intent);
             }
         });
@@ -223,6 +236,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.Viewholder> {
             description = itemView.findViewById(R.id.description);
 
         }
+
     }
 
     private void isSaved (final String postId, final ImageView image) {
